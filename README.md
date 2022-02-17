@@ -10,6 +10,13 @@ Automatically check in to Southwest flights using this easy-to-use gem. It'll al
 
 Tested and working on an Ubuntu 20.04 server (hosted by DigitalOcean).
 
+## Docker
+
+```
+docker build -t autoluv .
+docker run -v .autoluv.env:/.autoluv.env -v southwest-headers.json:/headers/southwest-headers.json autoluv schedule ABCDEF John Doe
+```
+
 ## Installation
 
 ### Get Southwest Headers
@@ -35,6 +42,11 @@ Once a cron job has been scheduled, do these steps:
 ### Install Gem
 
     gem install autoluv
+
+### Build/Install Gem
+
+    gem build
+    gem install autoluv-0.3.1.gem
 
 ## Usage
 

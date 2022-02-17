@@ -5,7 +5,7 @@ require "logger"
 require "fileutils"
 require "dotenv"
 
-Dotenv.load("#{Dir.home}/.autoluv.env")
+Dotenv.load("#{ENV["LUV_DOTENV"]}")
 
 module Autoluv
   class Error < StandardError; end
